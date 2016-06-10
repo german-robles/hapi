@@ -25,7 +25,7 @@ class LbPoolManager :
 				print ('Can not perform action!')
 	def getServerConfig(self):
 		imHere = os.path.dirname(os.path.abspath(__file__))
-		with open("/etc/hapi/hapi.conf" % (imHere), 'r') as ymlfile:
+		with open("/etc/hapi/hapi.conf", 'r') as ymlfile:
 			config = yaml.load(ymlfile)
 		server = (config['server'])
 		sslkey = (config['sslkey'])
